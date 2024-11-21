@@ -1,0 +1,80 @@
+server:
+  port: 8177
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/random_draw?autoReconnect=true&createDatabaseIfNotExist=true&useSSL=false
+    username: 'root'
+    password: 'xaxa23zyek24@'
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: false
+
+
+secret:
+  key: 38EA0125C0F8C5DF8C5EABB1A834A88F5974D69839E02CABDC359F1BEAE4709B4DE5EE149463F86984A0F34CE6AD83E9313201CF2810208674E14D3A71FB16DF
+
+#Active Directory Configurations
+active.directory:
+  domain: 'netone.co.zw'
+  url: 'ldap://10.95.10.63:389'
+  root_dn: 'dc=netone,dc=co,dc=zw'
+
+
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+
+file:
+  upload:
+    path: C:/Users/sethm/Desktop/MyFiles/
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          multipart: DEBUG
+
+
+
+
+#server:
+#  port: 8377
+#
+#spring:
+#  application:
+#    name: toll_free_register
+#
+#  datasource:
+#    url: jdbc:mysql://10.95.1.161:33000/toll_free_register?autoReconnect=true&createDatabaseIfNotExist=true&useSSL=false
+#    username: 'developer'
+#    password: '@devpwd#$'
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#
+#logging:
+#  file:
+#    name: /data/logs/${spring.application.name}.log
+#
+#secret:
+#  key: 0B4AEC4169575A2123E4C80C63F2C1E912F6BF7D9C71C95F7EC462236D2AA27DDFC095F6EC1F01DC259660A9FE24DE0BAB7F6DC3A2F659D62E2A22A1E3EB774C
+#
+#active.directory:
+#  domain: 'netone.co.zw'
+#  url: 'ldap://10.95.10.63:389'
+#  root_dn: 'dc=netone,dc=co,dc=zw'
+#
